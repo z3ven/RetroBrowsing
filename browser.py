@@ -58,7 +58,7 @@ def goon():
         if 'file:' in webname.get():
             filepathlox = webname.get()
             filepath = filepathlox.split(":")
-            webview.create_window(f'File: {filepath[1]}', filepath[1], gui=config.WEB_ENGINE)
+            webview.create_window(f'File: {filepath[1]}', filepath[1])
             webview.start(http_server=True)
         else: 
             if '.' in webname.get():
@@ -72,17 +72,17 @@ def goon():
         if webname.get() == "RetroBrowsing/guidebook" or webname.get() == "RetroBrowsing/Guidebook":
             guidebookk()
         if webname.get() == "RetroBrowsing/config" or webname.get() == "RetroBrowsing/Config":
-            webview.create_window('RetroBrowsing/Config', 'config.py', gui=config.WEB_ENGINE)
+            webview.create_window('RetroBrowsing/Config', 'config.py')
             webview.start(http_server=True)
         if 'file:' in webname.get():
             filepathlox = webname.get()
             filepath = filepathlox.split(":")
-            webview.create_window(f'File: {filepath[1]}', filepath[1], gui=config.WEB_ENGINE)
-            webview.start(http_server=True)
+            webview.create_window(f'File: {filepath[1]}', filepath[1])
+            webview.start(http_server=True, gui=config.WEB_ENGINE)
         else: 
             if '.' in webname.get():
-                window = webview.create_window(f'{webname.get()}', f'http://{webname.get()}', gui=config.WEB_ENGINE)
-                webview.start()
+                window = webview.create_window(f'{webname.get()}', f'http://{webname.get()}')
+                webview.start(gui=config.WEB_ENGINE)
             else:
                 mb.showerror(title="Invalid Parameter!", message="Invalid website addres or command!")
 def aboutttt():
@@ -104,52 +104,52 @@ def guidebookk():
         webview.create_window('RetroBrowsing/GuideBook', 'htmls/guidebook.html')
         webview.start(http_server=True)
     else:
-        webview.create_window('RetroBrowsing/GuideBook', 'htmls/guidebook.html', gui=config.WEB_ENGINE)
-        webview.start(http_server=True)
+        webview.create_window('RetroBrowsing/GuideBook', 'htmls/guidebook.html')
+        webview.start(http_server=True, gui=config.WEB_ENGINE)
 
 def github():
     if config.WEB_ENGINE == "DEFAULT":
         window = webview.create_window('RetroBrowsing/GitHub', f'http://github.com/z3ven/RetroBrowsing')
         webview.start()
     else:
-        window = webview.create_window('RetroBrowsing/GitHub', f'http://github.com/z3ven/RetroBrowsing', gui=config.WEB_ENGINE)
-        webview.start()  
+        window = webview.create_window('RetroBrowsing/GitHub', f'http://github.com/z3ven/RetroBrowsing')
+        webview.start(gui=config.WEB_ENGINE)  
 def supportprojecthoc22():
     if config.WEB_ENGINE == "DEFAULT":
         window = webview.create_window('RetroBrowsing/hoc2022', f'http://learn.algoritmika.az/')
         webview.start() 
     else:
-        window = webview.create_window('RetroBrowsing/hoc2022', f'http://learn.algoritmika.az/', gui=config.WEB_ENGINE)
-        webview.start() 
+        window = webview.create_window('RetroBrowsing/hoc2022', f'http://learn.algoritmika.az/')
+        webview.start(gui=config.WEB_ENGINE) 
 
 def youtubee():
     if config.WEB_ENGINE == "DEFAULT":
-        window = webview.create_window('YouTube', f'http://youtube.com/', gui=config.WEB_ENGINE)
+        window = webview.create_window('YouTube', f'http://youtube.com/')
         webview.start()
     else:
         window = webview.create_window('YouTube', f'http://youtube.com/')
-        webview.start()
+        webview.start(gui=config.WEB_ENGINE)
 def instagram():
     if config.WEB_ENGINE == "DEFAULT":
         window = webview.create_window('Instagram', f'http://intagram.com/')
         webview.start() 
     else:  
-        window = webview.create_window('Instagram', f'http://intagram.com/', gui=config.WEB_ENGINE)
-        webview.start()   
+        window = webview.create_window('Instagram', f'http://intagram.com/')
+        webview.start(gui=config.WEB_ENGINE)   
 def facebook():
     if config.WEB_ENGINE == "DEFAULT":
         window = webview.create_window('FaceBook', f'http://facebook.com/')
-        webview.start() 
+        webview.start(gui=config.WEB_ENGINE) 
     else:  
-        window = webview.create_window('FaceBook', f'http://facebook.com/', gui=config.WEB_ENGINE)
-        webview.start()   
+        window = webview.create_window('FaceBook', f'http://facebook.com/')
+        webview.start(gui=config.WEB_ENGINE)   
 def twitter():
     if config.WEB_ENGINE == "DEFAULT":
         window = webview.create_window('Twitter', f'http://twitter.com/')
-        webview.start() 
+        webview.start(gui=config.WEB_ENGINE) 
     else:  
-        window = webview.create_window('Twitter', f'http://twitter.com/', gui=config.WEB_ENGINE)
-        webview.start()  
+        window = webview.create_window('Twitter', f'http://twitter.com/')
+        webview.start(gui=config.WEB_ENGINE)  
 
 welcomeL = Label(width=180, text=welcometext)
 webname = Entry(width=100)
