@@ -101,10 +101,10 @@ def aboutttt():
     newWindow.mainloop()
 def guidebookk():
     if config.WEB_ENGINE == "DEFAULT":
-        webview.create_window('RetroBrowsing/GuideBook', 'guidebook.html')
+        webview.create_window('RetroBrowsing/GuideBook', 'htmls/guidebook.html')
         webview.start(http_server=True)
     else:
-        webview.create_window('RetroBrowsing/GuideBook', 'guidebook.html', gui=config.WEB_ENGINE)
+        webview.create_window('RetroBrowsing/GuideBook', 'htmls/guidebook.html', gui=config.WEB_ENGINE)
         webview.start(http_server=True)
 
 def github():
