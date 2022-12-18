@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>My Book</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="w3-content">
+<div class="w3-container">
+<h1 id="plugins">Plugins</h1>
+<p>Plugins are beta-features. To power on, you need to uncoment the function from 178-184. And uncomment calling it at row 186. Later you can download the plugins in .py format and after paste them to the <code>/plugins/</code> folder.</p>
+<h2 id="writing-your-own-plugins">Writing your own plugins</h2>
+<p>To write your own plugins you can use any library or code. Of course they needed to be insalled. Here is an example of the plugin that opens the window and calling from the main window</p>
+<pre><code class="lang-python">from tkinter <span class="hljs-keyword">import</span> *
+from .. <span class="hljs-keyword">import</span> browser
+def myextraplugin():<span class="hljs-type"></span>
+    <span class="hljs-keyword">new</span><span class="hljs-type">Window</span> = Toplevel(browserwindow)
+    <span class="hljs-keyword">new</span><span class="hljs-type">Window</span>.title(<span class="hljs-string">"RetroBrowsing 1.0"</span>)
+    name = Label(<span class="hljs-keyword">new</span><span class="hljs-type">Window</span>, text=<span class="hljs-string">"Example of the plugin."</span>)
+    name.pack()
+    <span class="hljs-keyword">new</span><span class="hljs-type">Window</span>.mainloop()
+
+my_mega_button = Button(text=<span class="hljs-string">'Plugin button'</span>, command=myextraplugin)
+<a href="guidebook.html">Go to the Main Guidebook</a>
+</ul>
+</div>
+
+</body>
+</html>
