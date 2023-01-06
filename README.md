@@ -1,5 +1,6 @@
 # RetroBrowsing
 The Browser for old computers with own web engine, themes and plugins. The GUI based on tkinter.
+# A new update! 
 # Installation
 Download Python from https://python.org, after install a pywebview library
 
