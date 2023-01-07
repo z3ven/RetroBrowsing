@@ -50,6 +50,16 @@ def about(lang):
         return render_template("about-ru.html", language=config.LOCALIZATION, build=config.VERSION, theme=config.THEME, retroengine="RetroEngine 2.0, GUI=HTML, CURRENTSTATE=RENDERING", themefile=guifile)
 
 
+@server.route("/downloadsupport/")
+def downloadsupport():
+    return render_template("downloader.html", themefile=guifile)
+@server.route("/downloadfile/", methods=["POST"])
+def download():
+    requestuserurl = request.form['text']
+    userurl = str(requestuserurl)
+    os.system(f"wget {userurl}")
+    return render_template("ok.html")
+    
 def serverrun():
     server.run(host="0.0.0.0", port=2386)
 retrobrowsing = webview.create_window(title="RetroBrowsing 2.0", url=f"http://127.0.0.1:2386/gui/{config.LOCALIZATION}", min_size=(800, 600))
