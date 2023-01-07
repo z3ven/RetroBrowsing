@@ -38,7 +38,7 @@ SET ALL THE SETTINGS IN CONFIG. AFTER YOU WILL NOT ABLE TO CHANGE THEM. Wait unt
 ## Requierements
 To install requirements you can just write this:
 ```
-pip3 install -r RetroBrowsing/requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Issue
