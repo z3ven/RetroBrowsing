@@ -3,7 +3,7 @@ import sys
 import webview
 import config
 from flask import Flask, render_template, request, redirect
-
+import urllib.request
 
 
 
@@ -57,9 +57,12 @@ def downloadsupport():
 def download():
     requestuserurl = request.form['text']
     userurl = str(requestuserurl)
-    os.system(f"wget {userurl}")
+    urllib.request.urlretrieve(userurl)
     return render_template("ok.html")
-    
+
+
+
+
 def serverrun():
     server.run(host="0.0.0.0", port=2386)
 retrobrowsing = webview.create_window(title="RetroBrowsing 2.0", url=f"http://127.0.0.1:2386/gui/{config.LOCALIZATION}", min_size=(800, 600))
