@@ -10,7 +10,7 @@ New update 2.0 containts this changes:
 * Themes
 * Fast-Redirect
 * Allows build
-* Downloads support(works only on macOS and Linux) via RetroEngine 2.0
+* Added windows support to download files via RetroEngine 2.0
 
 # Installation
 If you don't have python, install it from [here](https://python.org)
