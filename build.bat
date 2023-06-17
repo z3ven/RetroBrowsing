@@ -1,2 +1,0 @@
-pip3 install -r requirements.txt
-pyinstaller --noconfirm --onedir --windowed --add-data "/Users/abbaslutvaliyev/Documents/Сode/RetroBrowsing/2.0/templates:templates/" --add-data "/Users/abbaslutvaliyev/Documents/Сode/RetroBrowsing/2.0/static:static/" --add-data "config.py:."  "/Users/abbaslutvaliyev/Documents/Сode/RetroBrowsing/2.0/RetroBrowsing 2.0.py"
